@@ -445,7 +445,7 @@ public abstract class AbstractRender implements Runnable {
         }
         LevelChunk levelChunk = (LevelChunk) future.join().left().orElse(null);
         if (levelChunk != null) {
-            levelChunk.mustNotSave = true;
+//            levelChunk.mustNotSave = true;
         } else {
             if (renderCanCreateChunks()) {
                 CompletableFuture<Either<ChunkAccess, ChunkHolder.ChunkLoadingFailure>> genFuture = chunkCache.getChunkAtAsynchronously(x, z, true, true);
